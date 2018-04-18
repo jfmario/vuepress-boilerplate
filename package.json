@@ -1,0 +1,16 @@
+{
+  "name": "vuepress-blog",
+  "version": "1.0.0",
+  "description": "My personal blog with VuePress",
+  "main": "index.js",
+  "scripts": {
+    "build": "vuepress build ./src",
+    "serve": "http-server ./src/.vuepress/dist/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "John F Marion",
+  "license": "ISC",
+  "dependencies": {
+    "vuepress": "^0.5.1"
+  }
+}
