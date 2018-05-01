@@ -11,6 +11,9 @@
   "author": "John F Marion",
   "license": "ISC",
   "dependencies": {
-    "vuepress": "^0.5.1"
+    "moment": "^2.22.1",
+    "slugify": "^1.2.9",
+    "vuepress": "^0.5.1",
+    "yamljs": "^0.3.0"
   }
 }
