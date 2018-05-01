@@ -36,6 +36,19 @@ Build and server:
 
 `npm run build && npm run serve`
 
+**AWS**
+
+Copy the `example.env` file to `.env` and fill the values.
+You must create the AWS S3 Buckets and configure them for static site hosting.
+
+Publish site to dev bucket:
+
+`node . publish`
+
+Publish site to public bucket:
+
+`node . publish -p`
+
 ### Acknowledgements #
 
 **Author**

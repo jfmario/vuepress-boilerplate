@@ -27,8 +27,18 @@ newCommand.addArgument(['-e', '--template'], {
   defaultValue: "empty"
 });
 
+var publishCommand = subs.addParser('publish', {
+  addHelp: true
+});
+publishCommand.addArgument(['-p', '--production'], {
+  action: 'storeTrue'
+});
+
 
 var args = parser.parseArgs();
 if (args.sub == 'new') {
   require('./scripts/new-item')(args);
+}
+if (args.sub == 'publish') {
+  require('./scripts/publish')(args);
 }

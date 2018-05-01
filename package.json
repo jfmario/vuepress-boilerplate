@@ -11,6 +11,8 @@
   "author": "John F Marion",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.230.1",
+    "dotenv": "^5.0.1",
     "moment": "^2.22.1",
     "slugify": "^1.2.9",
     "vuepress": "^0.5.1",
