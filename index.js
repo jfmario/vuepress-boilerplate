@@ -31,4 +31,3 @@ var args = parser.parseArgs();
 if (args.sub == 'new') {
   require('./scripts/new-item')(args);
 }
-
