@@ -22,7 +22,8 @@ module.exports = function(args) {
   }
   
   var filename = slugify(title, { replacement: '_', lower: true });
-  filename = moment().format('YYYYMMDDHHmm_') + filename;
+  if (args.type == 'post')
+    filename = moment().format('YYYYMMDDHHmm_') + filename;
   console.log(filename);
   
   if (args.type == 'post') {

@@ -26,11 +26,11 @@ npm i        # install dependencies
 
 Create a new page:
 
-`node . new page -t "New Page Name"`
+`node . new page "New Page Name"`
 
 Create a new post:
 
-`node . new post -t "New Post Title"`
+`node . new post "New Post Title"`
 
 Build and server:
 

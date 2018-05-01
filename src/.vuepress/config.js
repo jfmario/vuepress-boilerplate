@@ -29,7 +29,8 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: "Home", link: "/" },
-      { text: "Blog", link: "/blog/" }
+      { text: "Blog", link: "/posts/" },
+      { text: "About", link: "/pages/about" }
     ],
     sidebar: [
       {

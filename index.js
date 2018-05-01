@@ -19,13 +19,14 @@ newCommand.addArgument('type', {
   action: 'store',
   choices: ["page", "post"]
 });
+newCommand.addArgument('title', {
+  action: 'store'
+});
 newCommand.addArgument(['-e', '--template'], {
   action: 'store',
   defaultValue: "empty"
 });
-newCommand.addArgument(['-t', '--title'], {
-  action: 'store'
-});
+
 
 var args = parser.parseArgs();
 if (args.sub == 'new') {
