@@ -5,4 +5,4 @@ title: About
 
 # About
 
-This is a page about me.
+<AboutBlurb />
