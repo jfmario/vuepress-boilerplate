@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{52:function(t,s,e){"use strict";e.r(s);var i={props:["page"]},n=e(0),a=Object(n.a)(i,function(){var t=this.$createElement,s=this._self._c||t;return s("div",[s("p",[this._v("This is the page data:")]),this._v(" "+this._s(this.page)+"\n")])},[],!1,null,null,null);s.default=a.exports}}]);

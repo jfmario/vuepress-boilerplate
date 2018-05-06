@@ -1,0 +1,29 @@
+
+style
+  include:scss book.scss
+#cover
+  h1.book-title Sample Book
+  h2.author John Marion
+.chapter
+  img.title-image(src="src/.vuepress/public/images/image.jpg")
+  h1 Introduction
+  include:markdown-it(html=true) books_src/intro.md
+.chapter
+  h1 Chapter 1
+  include:markdown-it(html=true) books_src/chapter1.md
+.chapter
+  h1 Chapter 2
+  include:markdown-it(html=true) books_src/chapter2.md
+
+template.footer
+  style(type='text/css').
+    .pdf-footer {
+      font-family: Helvetica;
+      font-size: 10px;
+      width: 100%;
+      text-align: center;
+    }  
+  .pdf-footer #[span.pageNumber]
+template.header
+  //- If you have a footer, you need a header (here we leave it empty)
+  span bla

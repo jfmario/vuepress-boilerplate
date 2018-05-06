@@ -49,6 +49,27 @@ Publish site to public bucket:
 
 `node . publish -p`
 
+**Books**
+
+This boilerplate has support for "books". 
+Book chapters should be defined somewhere under `books_src/` and
+referenced in book.yml.
+Book chapters should have no frontmatter or title. They should also 
+not use any Vue components if you want to use RelaXedJs.
+
+If you don't want the books, alter
+"src/.vuepress/books.json" to be only `[]` and then
+never run the `node . book` command.
+
+List books in `book.yml`. When you run `node . book`, the book chapters
+are given frontmatter and copied into the `src/book/` directory and 
+the `src/.vuepress/books.json` file will be written. When the site is built,
+any books will be present in the sidebar along with a table of contents.
+
+The `node . book` command will also write a root-level `.pug` file with 
+the name of the book that should be easily made into a PDF 
+using RelaXedJs.
+
 ### Acknowledgements #
 
 **Author**

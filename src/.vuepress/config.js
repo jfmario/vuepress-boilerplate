@@ -23,6 +23,22 @@ for (var i = 0; i < postsConfig.posts.length; ++i) {
   if (i == LIMIT_RECENT_POSTS) break;
 }
 
+var sidebar = [
+  // delete the following object if you don't want blog behavior
+  {
+    title: 'Recent Posts',
+    collapsible: true,
+    children: postsSection
+  }
+]
+
+var booksJSON = JSON.parse(fs.readFileSync(path.resolve(__dirname,
+  'books.json')).toString());
+
+for (var i = 0; i < booksJSON.length; ++i) {
+  sidebar.push(booksJSON[i]);
+}
+
 module.exports = {
   title: "My Blog",
   description: "So this is my blog.",
@@ -32,12 +48,6 @@ module.exports = {
       { text: "Blog", link: "/posts/" },
       { text: "About", link: "/pages/about" }
     ],
-    sidebar: [
-      {
-        title: 'Recent Posts',
-        collapsible: true,
-        children: postsSection
-      }
-    ]
+    sidebar: sidebar
   }
 };

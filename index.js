@@ -34,6 +34,10 @@ publishCommand.addArgument(['-p', '--production'], {
   action: 'storeTrue'
 });
 
+var bookCommand = subs.addParser('book', {
+  addHelp: true
+});
+
 
 var args = parser.parseArgs();
 if (args.sub == 'new') {
@@ -41,4 +45,7 @@ if (args.sub == 'new') {
 }
 if (args.sub == 'publish') {
   require('./scripts/publish')(args);
+}
+if (args.sub == 'book') {
+  require('./scripts/book')(args);
 }

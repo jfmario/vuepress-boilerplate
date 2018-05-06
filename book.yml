@@ -1,0 +1,15 @@
+
+# folder deleted, this must be rewritten with an example
+
+
+- title: Sample Book
+  author: John Marion
+  description: This is a book.
+  chapters:
+    - title: Introduction
+      img: /images/image.jpg
+      src: intro.md
+    - title: "Chapter 1"
+      src: chapter1.md
+    - title: "Chapter 2"
+      src: chapter2.md
