@@ -13,7 +13,7 @@ var DEFAULT_METADATA = {
 module.exports = function(args) {
   
   var filepath = 'pages';
-  if (args.type == 'post') filepath = 'posts';
+  if (args.type == 'post') filepath = `posts/${moment().format('YYYY/MM/DD')}`
   
   var title = args.title;
   if (!title) {
@@ -22,14 +22,12 @@ module.exports = function(args) {
   }
   
   var filename = slugify(title, { replacement: '_', lower: true });
-  if (args.type == 'post')
-    filename = moment().format('YYYYMMDDHHmm_') + filename;
   console.log(filename);
   
   if (args.type == 'post') {
     var postsConfig = JSON.parse(fs.readFileSync(path.resolve(
       __dirname, '..', 'src', '.vuepress', 'posts.json')).toString());
-    postsConfig.posts.unshift(filename);
+    postsConfig.posts.unshift(`${filepath.slice(6)}/${filename}`);
     fs.writeFileSync(path.resolve(
       __dirname, '..', 'src', '.vuepress', 'posts.json'),
       JSON.stringify(postsConfig));
