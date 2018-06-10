@@ -51,6 +51,8 @@ Publish site to public bucket:
 
 **Books**
 
+NOTE: This part doesn't work that well so don't do book stuff with this boilerplate yet.
+
 This boilerplate has support for "books". 
 Book chapters should be defined somewhere under `books_src/` and
 referenced in book.yml.
